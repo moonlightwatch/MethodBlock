@@ -1,4 +1,4 @@
-package methodblock_test
+package MethodBlock_test
 
 import (
 	"context"
@@ -6,17 +6,17 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/moonlightwatch/methodblock"
+	"github.com/moonlightwatch/MethodBlock"
 )
 
 func TestBlock(t *testing.T) {
 	ctx := context.Background()
 	nextCall := false
 	next := http.HandlerFunc(func(rw http.ResponseWriter, req *http.Request) { nextCall = true })
-	cfg := methodblock.CreateConfig()
+	cfg := MethodBlock.CreateConfig()
 	cfg.Message = "Method mot Allowed"
 	cfg.Methods = []string{"DELETE", "HEAD"}
-	handler, err := methodblock.New(ctx, next, cfg, "pluginName")
+	handler, err := MethodBlock.New(ctx, next, cfg, "pluginName")
 
 	if err != nil {
 		t.Fatalf("New MethodBlock error: %+v\n", err)
@@ -61,10 +61,10 @@ func TestPass(t *testing.T) {
 	nextCall := false
 	next := http.HandlerFunc(func(rw http.ResponseWriter, req *http.Request) { nextCall = true })
 
-	cfg := methodblock.CreateConfig()
+	cfg := MethodBlock.CreateConfig()
 	cfg.Message = "Method mot Allowed"
 	cfg.Methods = []string{"DELETE", "HEAD"}
-	handler, err := methodblock.New(ctx, next, cfg, "pluginName")
+	handler, err := MethodBlock.New(ctx, next, cfg, "pluginName")
 
 	if err != nil {
 		t.Fatalf("New MethodBlock error: %+v\n", err)

@@ -1,4 +1,4 @@
-package methodblock
+package MethodBlock
 
 import (
 	"context"
