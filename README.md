@@ -8,8 +8,8 @@ config example
 experimental:
   plugins:
     methodBlock:
-        moduleName: github.com/moonlightwatch/methodblock
-        version: v0.1.1
+        moduleName: github.com/moonlightwatch/MethodBlock
+        version: v0.1.4
 
 ```
 
