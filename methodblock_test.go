@@ -2,10 +2,11 @@ package methodblock_test
 
 import (
 	"context"
-	"methodblock"
 	"net/http"
 	"net/http/httptest"
 	"testing"
+
+	"github.com/moonlightwatch/methodblock"
 )
 
 func TestBlock(t *testing.T) {

@@ -5,7 +5,7 @@ displayName: HTTP Request Method Block
 type: middleware
 
 # The import path of your plugin.
-import: github.com/moonlightwatch/MethodBlock
+import: github.com/moonlightwatch/methodblock
 
 # A brief description of what your plugin is doing.
 summary: Block some http request method
